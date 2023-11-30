@@ -1,0 +1,14 @@
+/Users/dan/Source/Repos/CSVParser/bin/Debug/net8.0/CSVParser
+/Users/dan/Source/Repos/CSVParser/bin/Debug/net8.0/CSVParser.deps.json
+/Users/dan/Source/Repos/CSVParser/bin/Debug/net8.0/CSVParser.runtimeconfig.json
+/Users/dan/Source/Repos/CSVParser/bin/Debug/net8.0/CSVParser.dll
+/Users/dan/Source/Repos/CSVParser/bin/Debug/net8.0/CSVParser.pdb
+/Users/dan/Source/Repos/CSVParser/obj/Debug/net8.0/CSVParser.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dan/Source/Repos/CSVParser/obj/Debug/net8.0/CSVParser.AssemblyInfoInputs.cache
+/Users/dan/Source/Repos/CSVParser/obj/Debug/net8.0/CSVParser.AssemblyInfo.cs
+/Users/dan/Source/Repos/CSVParser/obj/Debug/net8.0/CSVParser.csproj.CoreCompileInputs.cache
+/Users/dan/Source/Repos/CSVParser/obj/Debug/net8.0/CSVParser.dll
+/Users/dan/Source/Repos/CSVParser/obj/Debug/net8.0/refint/CSVParser.dll
+/Users/dan/Source/Repos/CSVParser/obj/Debug/net8.0/CSVParser.pdb
+/Users/dan/Source/Repos/CSVParser/obj/Debug/net8.0/CSVParser.genruntimeconfig.cache
+/Users/dan/Source/Repos/CSVParser/obj/Debug/net8.0/ref/CSVParser.dll
