@@ -12,3 +12,4 @@
 /Users/dan/Source/Repos/CSVParser/obj/Debug/net8.0/CSVParser.pdb
 /Users/dan/Source/Repos/CSVParser/obj/Debug/net8.0/CSVParser.genruntimeconfig.cache
 /Users/dan/Source/Repos/CSVParser/obj/Debug/net8.0/ref/CSVParser.dll
+/Users/dan/Source/Repos/CSVParser/obj/Debug/net8.0/CSVParser.sourcelink.json
