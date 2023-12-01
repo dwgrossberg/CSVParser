@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSVParser")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8549dc43954b7062f8b870e65f466ddc0d74e394")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4bb6835e607616924530fc260552a3d5f065d31")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSVParser")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSVParser")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
