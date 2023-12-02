@@ -7,64 +7,79 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Get csv file name from user
+        // Get csv file name from user.
         Console.WriteLine("What is the name of the file you would like to search for?");
         Console.WriteLine();
         var fileName = Console.ReadLine();
         Console.WriteLine();
         if (fileName is not null)
         {
-            // Save valid and invalid emails as string arrays
+            // Save valid and invalid emails as string arrays.
             (string[], string[]) emails = parseCSVFile(fileName);
             string[] validEmails = emails.Item1;
             string[] invalidEmails = emails.Item2;
-            // Print valid emails
-            foreach (var email in validEmails)
+            string error = "ERROR-------------------------------------------------";
+            // Check for error message.
+            if (string.Equals(validEmails[0], error))
             {
-                Console.WriteLine(email);
+                Console.WriteLine(validEmails[0]);
+                Console.WriteLine(invalidEmails[0]);
             }
-            Console.WriteLine();
-            // Print invalid emails
-            foreach (var email in invalidEmails)
+            // Otherwise print email lists.
+            else
             {
-                Console.WriteLine(email);
+                // Print valid emails.
+                Console.WriteLine("VALID EMAIL ADDRESSES:");
+                foreach (var email in validEmails)
+                {
+                    Console.WriteLine(email);
+                }
+                Console.WriteLine();
+                // Print invalid emails.
+                Console.WriteLine("INVALID EMAIL ADDRESSES:");
+                foreach (var email in invalidEmails)
+                {
+                    Console.WriteLine(email);
+                }
             }
-            Console.WriteLine();
+            Console.WriteLine();            
         }
     }
 
     public static (string[], string[]) parseCSVFile(string fileName)
     {
-        string[] error = { "Error:" };
-        string[] fileNotFound = { "Provided file name does not exist." };
+        string[] error = { "ERROR-------------------------------------------------" };
+        string[] fileNotFound = { "Provided file name does not exist in current directory." };
         try
         {
-            // Search project working directory for matching csv file
+            // Search project working directory for matching csv file.
             string directory = Environment.CurrentDirectory;
-            string filePath = $"{directory}/{fileName}.csv";
+            string filePath = $"{directory}{Path.DirectorySeparatorChar}{fileName}.csv";
 
-            // Parse csv file
+            // Parse csv file.
             StreamReader ? reader = null;
             if (File.Exists(filePath))
             {
                 reader = new StreamReader(File.OpenRead(filePath));
                 List<string> emails = new List<string>();
-                // Loop through all rows within csv file
+                // Loop through all rows within csv file.
                 while (!reader.EndOfStream){
                     var line = reader.ReadLine();
                     if (line is not null) 
                     {
                         var values = line.Split(',');
-                        // Extract emails from csv
+                        // Extract emails from csv - found in column index 2.
                         emails.Add(values[2]);
                     }   
                 }
+
+                // Validate emails and save accordingly.
+
+
                 return (emails.ToArray(), emails.ToArray());
             } 
             else
             {
-                Console.WriteLine("Error: File doesn't exist.");
-                Console.WriteLine();
                 return (error, fileNotFound);
             }
 
