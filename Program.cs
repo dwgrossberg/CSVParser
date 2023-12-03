@@ -21,6 +21,7 @@ class Program
             (string[], string[]) emails = ParseCSVFile(fileName);
             string[] validEmails = emails.Item1;
             string[] invalidEmails = emails.Item2;
+            
             // Check for error message.
             if ((IsValidEmail(validEmails[0])) == false)
             {
