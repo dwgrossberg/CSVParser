@@ -8,6 +8,10 @@ If the file does exist, the program will output a list of valid email addresses 
 
 CSV file structure will be in the form of: FirsName, LastName, EmailAddress
 
-Built with .NET 8
+_Built with .NET 8_
 
-## Usage Example
+## Usage Examples
+
+![File is found correctly and parsed.](./CSVParser1.gif)
+
+![File is not found.](./CSVParser2.gif)
