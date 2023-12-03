@@ -1,0 +1,5 @@
+/Users/dan/Source/Repos/CSVParser/bin/Release/net8.0/publish/CSVParser
+/Users/dan/Source/Repos/CSVParser/bin/Release/net8.0/publish/CSVParser.dll
+/Users/dan/Source/Repos/CSVParser/bin/Release/net8.0/publish/CSVParser.deps.json
+/Users/dan/Source/Repos/CSVParser/bin/Release/net8.0/publish/CSVParser.runtimeconfig.json
+/Users/dan/Source/Repos/CSVParser/bin/Release/net8.0/publish/CSVParser.pdb

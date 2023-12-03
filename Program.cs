@@ -3,6 +3,7 @@ using System.IO;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
+
 namespace CSVParser;
 
 class Program
@@ -54,8 +55,27 @@ class Program
         try
         {
             // Search project working directory for matching csv file.
-            string directory = Environment.CurrentDirectory;
-            string filePath = $"{directory}{Path.DirectorySeparatorChar}{fileName}.csv";
+            // Get application base directory and save in dict.
+            Dictionary<string, System.IO.DirectoryInfo> sysDir = new Dictionary<string, System.IO.DirectoryInfo>();
+            sysDir.Add("dirPath", new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory));
+
+            // Get current directory path and save in dict.
+            Dictionary<string, string?> currDir = new Dictionary<string, string?>();
+            currDir.Add("currDir", Regex.Match(AppDomain.CurrentDomain.BaseDirectory, @"[^\\/]*$", RegexOptions.RightToLeft)?.Value);
+            
+            // Move up the directory tree until project root folder - CSVParser.
+            while (currDir.ElementAt(0).Value != "CSVParser")
+            {
+                if (sysDir["dirPath"].Parent is not null)
+                {
+                    sysDir["dirPath"] = sysDir["dirPath"].Parent!;
+                }
+                currDir["currDir"] = Regex.Match(sysDir["dirPath"].ToString(), @"[^\\/]*$", RegexOptions.RightToLeft)?.Value;
+            }
+
+            // Construct file path.
+            string pathToProjectFolder = sysDir["dirPath"].ToString();
+            string filePath = $"{pathToProjectFolder}{Path.DirectorySeparatorChar}{fileName}.csv";
 
             // Parse csv file.
             StreamReader ? reader = null;
