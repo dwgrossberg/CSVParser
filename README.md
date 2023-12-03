@@ -6,7 +6,7 @@ If the file does not exist within the current working directory, the program wil
 
 If the file does exist, the program will output a list of valid email addresses and a list of invalid email addresses.
 
-CSV file structure will be in the form of: FirsName, LastName, EmailAddress
+CSV file structure will be in the form of: FirstName, LastName, EmailAddress
 
 _Built with .NET 8_
 
