@@ -11,6 +11,7 @@ class Program
     static void Main(string[] args)
     {
         // Get csv file name from user.
+        Console.WriteLine();
         Console.WriteLine("What is the name of the file you would like to search for?");
         Console.WriteLine();
         var fileName = Console.ReadLine();
@@ -21,7 +22,7 @@ class Program
             (string[], string[]) emails = ParseCSVFile(fileName);
             string[] validEmails = emails.Item1;
             string[] invalidEmails = emails.Item2;
-            
+
             // Check for error message.
             if ((IsValidEmail(validEmails[0])) == false)
             {
@@ -84,6 +85,7 @@ class Program
             {
                 reader = new StreamReader(File.OpenRead(filePath));
                 List<string> emails = new List<string>();
+                
                 // Loop through all rows within csv file.
                 while (!reader.EndOfStream){
                     var line = reader.ReadLine();
